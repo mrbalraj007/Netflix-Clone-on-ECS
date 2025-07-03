@@ -1,4 +1,4 @@
-# FROM nginx:latest
+# Use AWS public ECR nginx image to avoid Docker Hub rate limits
 FROM public.ecr.aws/nginx/nginx:latest
 
 
