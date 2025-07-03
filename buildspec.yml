@@ -13,7 +13,8 @@ phases:
       - echo Installing Docker and dependencies...
       - yum update -y
       - yum install -y docker jq
-      - service docker start
+      - systemctl start docker
+      - systemctl enable docker
       - usermod -a -G docker root
 
   pre_build:

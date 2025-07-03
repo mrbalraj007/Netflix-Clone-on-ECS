@@ -1,4 +1,5 @@
-# Exclude build-related files
+# Exclude duplicate and unnecessary files
+index.txt
 buildspec.txt
 README.md
 LICENSE
