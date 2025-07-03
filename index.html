@@ -1,95 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome | Docker Web App</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta name="description" content="Netflix Clone - Watch TV Shows Online, Watch Movies Online" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+    <link
+      rel="icon"
+      href="http://pngimg.com/uploads/netflix/small/netflix_PNG15.png"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__brand">
+          <img
+            src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
+            alt="logo"
+            class="brand__logo"
+          />
+        </div>
 
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+        <div class="navbar__nav__items">
+          <div class="nav__item">
+            <div class="dropdown__container">
+              <i class="fas fa-globe"></i>
+              <select
+                name="languages"
+                id="languagesSelect"
+                class="language__drop__down"
+              >
+                <option value="english" selected style="color: white;">English</option>
+                <option value="hindi" style="color: white;">हिन्दी</option>
+              </select>
+            </div>
+          </div>
 
-    .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                  url('https://images.unsplash.com/photo-1522199786352-397f5f51b5b7?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      height: 100vh;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
+          <div class="nav__item">
+            <button class="signin__button">Sign in</button>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    h1 {
-      font-size: 3.5em;
-      margin-bottom: 0.4em;
-      animation: fadeInDown 1s ease-out;
-    }
+    <main>
+      <section class="hero">
+        <div class="hero__bg__image__container">
+          <img
+            src="https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/710d74e0-7158-408e-8d9b-23c219dee5df/IN-en-20210719-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+            alt="BG hero image"
+            class="hero__bg__image"
+          />
+        </div>
+        <div class="hero__bg__overlay"></div>
 
-    p {
-      font-size: 1.3em;
-      color: #ddd;
-      max-width: 600px;
-      animation: fadeInUp 1s ease-out;
-    }
+        <div class="hero__card">
+          <h1 class="hero__title">
+            Netflix Demo Website,<br />
+            Register Now.
+          </h1>
+          <p class="hero__subtitle">Watch anywhere and cancel anytime.</p>
+          <p class="hero__description">
+            Ready to watch? Enter your email to create or restart your
+            membership .
+          </p>
 
-    .btn {
-      margin-top: 2rem;
-      padding: 0.75rem 2rem;
-      font-size: 1.1em;
-      border: none;
-      border-radius: 50px;
-      background: linear-gradient(to right, #ff416c, #ff4b2b);
-      color: white;
-      cursor: pointer;
-      transition: 0.4s ease-in-out;
-      animation: fadeInUp 1.4s ease-out;
-    }
+          <div class="email__form__container">
+            <div class="form__container">
+              <input type="email" class="email__input" placeholder=" " />
+              <label class="email__label">Email Address</label>
+            </div>
+            <button class="primary__button">
+              Get Started <i class="fal fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="features__container">
+        <!-- Feature 1 -->
+        <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">Enjoy on your TV.</h3>
+            <h5 class="feature__sub__title">
+              Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+              Blu-ray players and more.
+            </h5>
+          </div>
+          <div class="feature__image__container">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+              alt="Feature image"
+              class="feature__image"
+            />
+            <div class="feature__backgroud__video__container">
+              <video
+                autoplay=""
+                loop=""
+                muted=""
+                class="feature__backgroud__video"
+              >
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">Download your shows to watch offline.</h3>
+            <h5 class="feature__sub__title">
+              Save your favorites easily and always have something to watch.
+            </h5>
+          </div>
+          <div class="feature__image__container">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/phone.png"
+              alt="Feature image"
+              class="feature__image"
+            />
+            <div class="feature__backgroud__video__container">
+              <video
+                autoplay=""
+                loop=""
+                muted=""
+                class="feature__backgroud__video"
+              >
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-phone-in-0819.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">Watch everywhere.</h3>
+            <h5 class="feature__sub__title">
+              Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
+            </h5>
+          </div>
+          <div class="feature__image__container">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/devices.png"
+              alt="Feature image"
+              class="feature__image"
+            />
+            <div class="feature__backgroud__video__container">
+              <video
+                autoplay=""
+                loop=""
+                muted=""
+                class="feature__backgroud__video"
+              >
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in-0819.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">Create profiles for kids.</h3>
+            <h5 class="feature__sub__title">
+              Send kids on adventures with their favorite characters in a space made just for them—free with your membership.
+            </h5>
+          </div>
+          <div class="feature__image__container">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/kids.png"
+              alt="Feature image"
+              class="feature__image"
+            />
+            <div class="feature__backgroud__video__container">
+              <video
+                autoplay=""
+                loop=""
+                muted=""
+                class="feature__backgroud__video"
+              >
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-kids-in-0819.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq__container">
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>What is Netflix?</h4>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>
+              Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+            </p>
+          </div>
+        </div>
 
-    .btn:hover {
-      background: linear-gradient(to right, #ff4b2b, #ff416c);
-      transform: scale(1.05);
-    }
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>How much does Netflix cost?</h4>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>
+              Watch Netflix on your smartphone, tablet, smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans start from ₹199/month.
+            </p>
+          </div>
+        </div>
 
-    footer {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9em;
-      color: #aaa;
-    }
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>Where can I watch?</h4>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>
+              Watch instantly from any device that offers the Netflix app or from a web browser on your laptop or desktop.
+            </p>
+          </div>
+        </div>
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>Is there a contract or commitment?</h4>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>
+              No, there is no contract or commitment. You can cancel your membership at any time.
+            </p>
+          </div>
+        </div>
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
-  <div class="hero">
-    <h1>Balraj Singh Welcome to My Docker Web App 🚀</h1>
-    <p>This awesome page is served from an Apache server running inside a Docker container on AWS EC2.</p>
-    <button class="btn" onclick="alert('Let’s build something great!')">Get Started</button>
-  </div>
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>Can I cancel my membership?</h4>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>
+              Yes, you can cancel your membership at any time. There are no cancellation fees.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <footer>
-    &copy; 2025 Balraj Singh | All Rights Reserved
-  </footer>
-</body>
+    <footer>
+      <div class="footer__content">
+        <div class="footer__links">
+          <a href="#" class="footer__link">FAQ</a>
+          <a href="#" class="footer__link">Help Center</a>
+          <a href="#" class="footer__link">Terms of Use</a>
+          <a href="#" class="footer__link">Privacy</a>
+        </div>
+
+        <div class="footer__socials">
+          <a href="#" class="footer__social__link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="footer__social__link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="footer__social__link">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="footer__copyright">
+          &copy; 2025 Balraj Singh | All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/index.js"></script>
+  </body>
 </html>
 
