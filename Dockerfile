@@ -1,4 +1,5 @@
-FROM nginx:latest
+# FROM nginx:latest
+FROM public.ecr.aws/nginx/nginx:latest
 
 # Set the working directory to /usr/share/nginx/html
 WORKDIR /usr/share/nginx/html
